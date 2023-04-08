@@ -1,13 +1,4 @@
-/* Database schema to keep the structure of entire database. */
-
-CREATE TABLE animals(
- id INT GENERATED ALWAYS AS IDENTITY,
-name VARCHAR(100) NOT NULL,
-date_of_birth DATE NULL,
-escape_attempts INT NOT NULL,
-neutered BOOLEAN NOT NULL,
-weight_kg DECIMAL NOT NULL,
-PRIMARY KEY(id)/* Populate database with sample data. */
+/* Populate database with sample data. */
 
 INSERT INTO animals(name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES 
 ('Agumon','2020-02-03','0','True','10.23'),
@@ -24,7 +15,3 @@ INSERT INTO animals(name, date_of_birth, escape_attempts, neutered, weight_kg) V
 ('Boarmon','2005-06-07','7','True','20.40'),
 ('Blossom','1998-10-13','3','True','17.00'),
 ('Ditto','2022-05-14','4','True','22.00');
-);
-
-ALTER TABLE animals
-ADD species TEXT;
