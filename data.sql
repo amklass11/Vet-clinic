@@ -1,5 +1,14 @@
-/* Populate database with sample data. */
+/* Database schema to keep the structure of entire database. */
 
-INSERT INTO animals (name) VALUES ('Luna');
-INSERT INTO animals (name) VALUES ('Daisy');
-INSERT INTO animals (name) VALUES ('Charlie');
+CREATE TABLE animals(
+ id INT GENERATED ALWAYS AS IDENTITY,
+name VARCHAR(100) NOT NULL,
+date_of_birth DATE NULL,
+escape_attempts INT NOT NULL,
+neutered BOOLEAN NOT NULL,
+weight_kg DECIMAL NOT NULL,
+PRIMARY KEY(id)
+);
+
+ALTER TABLE animals
+ADD species TEXT;
